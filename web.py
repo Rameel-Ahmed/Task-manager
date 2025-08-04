@@ -25,7 +25,7 @@ for index, todo in enumerate(todos):
         todos.pop(index)
         functions.write_todos(todos)           # Save updated list
         del st.session_state[todo]             # Remove it from Streamlit's state
-        st.experimental_rerun()                # Rerun the app to update UI
+        st.rerun()                # Rerun the app to update UI
 
 # Input field to add a new todo
 st.text_input(
